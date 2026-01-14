@@ -1,15 +1,20 @@
-const num1 = number(document.getElementById('numero1'));
-const num2 = number(document.getElementById('numero2'));
 const btn = document.getElementById('btn');
-const div1 = 
+const div1 = document.getElementById('div1');
+const div2 = document.getElementById('div2');
 function confronta() {
-    if (num1.value > num2.value) {
-  num1.style.backgroundColor = 'green';
-  num2.style.backgroundColor = 'red';
+const num1 = Number(document.getElementById('numero1').value);
+const num2 = Number(document.getElementById('numero2').value);
+    if (num1 > num2) {
+  div1.style.backgroundColor = 'green';
+  div2.style.backgroundColor = 'red';
     }
-      if (num1.value < num2.value) {
-  num1.style.backgroundColor = 'red';
-  num2.style.backgroundColor = 'green';
+      if (num1 < num2) {
+  div1.style.backgroundColor = 'red';
+  div2.style.backgroundColor = 'green';
+    }
+      if (num1 === num2) {
+  div1.style.backgroundColor = 'gray';
+  div2.style.backgroundColor = 'gray';
     }
 }
 btn.onclick = confronta;
